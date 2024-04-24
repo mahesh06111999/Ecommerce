@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Spartan', sans-serif;
 }
 
 html {
@@ -49,5 +49,111 @@ p {
 }
 
 body {
+  max-width: 1600px;
   width: 100%;
+  margin: auto;
+}
+nav {
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0px;
+}
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+#navlink {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+a:hover,
+a.active {
+  color: #088178;
+}
+
+a.active::after,
+a:hover::after {
+  position: absolute;
+  content: '';
+  width: 8%;
+  height: 2px;
+  background-color: #088178;
+  bottom: -4px;
+  left: -5px;
+}
+
+main {
+  background-image: url('./img/hero4.png');
+  height: 90vh;
+  width: 100%;
+  background-position: top 25% right 0%;
+  background-size: cover;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 7px;
+}
+
+main h4 {
+  padding: 15px;
+}
+main h1 {
+  color: #088178;
+}
+
+main button {
+  background-image: url('./img/button.png');
+  background-color: transparent;
+  color: #088178;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+section {
+  padding: 40px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.fe-box {
+  border: 1px solid rgb(202, 202, 202);
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  margin: 15px;
+}
+
+.fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
+}
+
+.fe-box h6 {
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color: #088178;
+  background-color: #fddde4;
 }
